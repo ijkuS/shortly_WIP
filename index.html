@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./styles.css" />
+
+		<title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+	</head>
+	<body>
+		<main class="wrapper">
+			<div class="sub-wrapper nav">
+				<section class="desktop-menu">
+					<div class="logo-menu">
+						<a class="logo">
+							<img src="images/logo.svg" alt="logo" />
+						</a>
+						<menu>
+							<a>Features</a>
+							<a>Pricing</a>
+							<a>Resources</a>
+						</menu>
+					</div>
+					<div class="log-buttons">
+						<a id="button-login">Login</a>
+						<button id="button-signup">Sign Up</button>
+					</div>
+				</section>
+
+				<section class="mobile-menu">
+					<a class="logo">
+						<img src="images/logo.svg" alt="logo" />
+					</a>
+					<a id="menu-icon">
+						<img
+							src="./images/icon-menu-grey.svg"
+							alt="icon-menu-black" />
+					</a>
+					<div class="mobile-menu-list">
+						<menu>
+							<a>Features</a>
+							<a>Pricing</a>
+							<a>Resources</a>
+							<hr />
+							<a id="button-login-mobile">Login</a>
+							<button id="button-signup-mobile">
+								Sign Up
+							</button>
+						</menu>
+					</div>
+				</section>
+			</div>
+
+			<div class="sub-wrapper intro">
+				<section class="container__intro">
+					<div class="intro-img">
+						<img
+							class="hero"
+							src="./images/illustration-working.svg"
+							alt="llustration-working" />
+					</div>
+
+					<div class="intro-text">
+						<h1>
+							More than just <br />
+							shorter links
+						</h1>
+						<p>
+							Build your brand’s recognition and get
+							detailed insights on how your links are
+							performing.
+						</p>
+						<button id="button-start">Get Started</button>
+					</div>
+				</section>
+			</div>
+
+			<div class="sub-wrapper input">
+				<section class="container__input">
+					<div>
+						<input
+							id="input-url"
+							type="text"
+							placeholder="Shorten a link here..." />
+						<p class="input-warning">Please add a link</p>
+					</div>
+					<button id="button-shorten">Shorten It!</button>
+				</section>
+			</div>
+
+			<div class="sub-wrapper shorten-url" display="none">
+				<!-- <section class="container__shorten-url">
+					<p class="long-url">
+						https://unsplash.com/photos/body-of-water-under-sky-6ArTTluciuA
+					</p>
+					<hr>
+					<p class="short-url">https://1pt.co/k9rom</p>
+					<button class="button-copy">Copy</button>
+				</section>
+
+				<section class="container__shorten-url">
+					<p class="long-url">
+						https://unsplash.com/photos/body-of-water-under-sky-6ArTTluciuA
+					</p>
+					<hr>
+					<p class="short-url">https://1pt.co/k9rom</p>
+					<button class="button-copy">Copy</button>
+				</section> -->
+			</div>
+
+			<div class="sub-wrapper advanced">
+				<section class="container__advanced">
+					<div class="advanced-text">
+						<h3>Advanced Statistics</h3>
+						<p>
+							Track how your links are performing across
+							the web with our advanced statistics
+							dashboard.
+						</p>
+					</div>
+				</section>
+
+				<section class="container__advanced-cards">
+					<div class="advanced-cards">
+						<div class="advanced-card-1">
+							<i>
+								<img
+									src="./images/icon-brand-recognition.svg"
+									alt="icon-brand-recognition" />
+							</i>
+							<h5>Brand Recognition</h5>
+							<p>
+								Boost your brand recognition with each
+								click. Generic links don’t mean a thing.
+								Branded links help instil confidence in
+								your content.
+							</p>
+						</div>
+						<div class="advanced-card-2">
+							<i>
+								<img
+									src="./images/icon-detailed-records.svg"
+									alt="icon-detailed-records" />
+							</i>
+							<h5>Detailed Records</h5>
+							<p>
+								Gain insights into who is clicking your
+								links. Knowing when and where people
+								engage with your content helps inform
+								better decisions.
+							</p>
+						</div>
+						<div class="advanced-card-3">
+							<i>
+								<img
+									src="./images/icon-fully-customizable.svg"
+									alt="icon-fully-customizable" />
+							</i>
+							<h5>Fully Customizable</h5>
+							<p>
+								Improve brand awareness and content
+								discoverability through customizable
+								links, supercharging audience
+								engagement.
+							</p>
+						</div>
+					</div>
+					<div class="pattern-line"></div>
+				</section>
+			</div>
+
+			<div class="sub-wrapper boost">
+				<section class="container__boost">
+					<h3>Boost your links today</h3>
+					<button id="button-boost">Get Started</button>
+				</section>
+			</div>
+
+			<div class="sub-wrapper footer">
+				<section class="container__footer">
+					<a class="logo-footer"> <h3>Shortly</h3> </a>
+					<div class="footer-table">
+						<dl class="features">
+							<dt><em>Features</em></dt>
+							<dt>Link Shortening</dt>
+							<dt>Branded Links</dt>
+							<dt>Analytics</dt>
+						</dl>
+						<dl class="resources">
+							<dt><em>Resources</em></dt>
+							<dt>Blog</dt>
+							<dt>Developers</dt>
+							<dt>Support</dt>
+						</dl>
+						<dl class="company">
+							<dt><em>Company</em></dt>
+							<dt>About</dt>
+							<dt>Our Team</dt>
+							<dt>Careers</dt>
+							<dt>Contact</dt>
+						</dl>
+						<div class="sns-icons">
+							<a href="">
+								<img
+									src="./images/icon-facebook.svg"
+									alt="icon-facebook" />
+							</a>
+							<a href="">
+								<img
+									src="./images/icon-twitter.svg"
+									alt="icon-twitter" />
+							</a>
+							<a href="">
+								<img
+									src="./images/icon-pinterest.svg"
+									alt="icon-pinterest" />
+							</a>
+							<a href="">
+								<img
+									src="./images/icon-instagram.svg"
+									alt="icon-instagram" />
+							</a>
+						</div>
+					</div>
+				</section>
+				<div class="attribution">
+					Challenge by
+					<a
+						href="https://www.frontendmentor.io?ref=challenge"
+						target="_blank"
+						>Frontend Mentor</a
+					>. Coded by <a href="#">Noej</a>.
+				</div>
+			</div>
+		</main>
+		<script src="./index.js"></script>
+	</body>
+</html>
