@@ -1,0 +1,37 @@
+body {
+	display: grid;
+	height: 100vh;
+	margin: 0;
+	place-items: center center;
+	background-color: gray;
+}
+:root {
+	--icon-facebook: url('./images/icon-facebook.svg');
+	--icon-twitter: url('./images/icon-twitter.svg');
+	--icon-pinterest: url('./images/icon-pinterest.svg');
+	--icon-instagram: url('./images/icon-instagram.svg');
+
+	--icon-facebook-hover: url('./images/icon-facebook-hover.svg');
+	--icon-twitter-hover: url('./images/icon-twitter-hover.svg');
+	--icon-pinterest-hover: url('./images/icon-pinterest-hover.svg');
+	--icon-instagram-hover: url('./images/icon-instagram-hover.svg');
+}
+.icon {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	/* object-fit: cover; */
+	background-size: contain;
+	background-position: center;
+	margin: 1rem;
+}
+.icon-facebook {
+	background-image: var(--icon-facebook);
+}
+.icon-facebook:hover {
+	background-image: var(--icon-facebook-hover);
+}
+.icon-twitter {
+	background-image: var(--icon-twitter);
+}

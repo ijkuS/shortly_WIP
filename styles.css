@@ -14,8 +14,8 @@
 
 	--color-text-white: white;
 
-	--color-point-cyan: hsl(180, 66%, 49%);
-	--color-point-cyan-hover: hsl(180, 83%, 75%);
+	--color-point-cyan: hsl(180, 66%, 49%); /*	#2acfcf */
+	--color-point-cyan-hover: hsl(180, 83%, 75%); /* 	#8af4f4 */
 	--color-point-violet: hsl(257, 27%, 26%);
 	--color-point-red: hsl(0, 87%, 67%);
 
@@ -30,6 +30,16 @@
 	--bg-boost-mobile: url('./images/bg-boost-mobile.svg');
 
 	--icon-menu: url('./images/icon-menu-black.svg');
+
+	--icon-facebook: url('./images/icon-facebook.svg');
+	--icon-twitter: url('./images/icon-twitter.svg');
+	--icon-pinterest: url('./images/icon-pinterest.svg');
+	--icon-instagram: url('./images/icon-instagram.svg');
+
+	--icon-facebook-hover: url('./images/icon-facebook-hover.svg');
+	--icon-twitter-hover: url('./images/icon-twitter-hover.svg');
+	--icon-pinterest-hover: url('./images/icon-pinterest-hover.svg');
+	--icon-instagram-hover: url('./images/icon-instagram-hover.svg');
 }
 body {
 	width: 100vw;
@@ -60,7 +70,10 @@ h1 {
 	line-height: 120%;
 }
 h3 {
-	font-size: 2rem;
+	font-size: 2.5rem;
+}
+h5 {
+	font-size: 1.25rem;
 }
 p {
 	color: var(--color-grayish-violet);
@@ -114,14 +127,11 @@ a:hover {
 	background-image: var(--bg-boost-desktop);
 	background-repeat: no-repeat;
 	background-size: 100vw;
+	height: auto;
 	object-fit: fill;
-
-	background-position: center;
 
 	background-color: var(--color-point-violet);
 	color: var(--color-text-white);
-
-	padding: 2rem 0;
 }
 
 .sub-wrapper.footer {
@@ -187,6 +197,10 @@ section.container__intro {
 .container__intro .intro-img {
 	width: 50%;
 	z-index: -2;
+	margin: auto;
+}
+.container__intro .intro-img img {
+	height: 100%;
 }
 
 .container__intro .intro-text {
@@ -323,6 +337,12 @@ section.container__advanced-cards {
 	gap: 1.5rem;
 	z-index: 1;
 }
+.advanced-cards h5 {
+	padding-bottom: 0.6rem;
+}
+.advanced-cards p {
+	font-size: 1rem;
+}
 .pattern-line {
 	position: absolute;
 	left: 0;
@@ -392,19 +412,49 @@ dt {
 	color: var(--color-gray);
 	font-weight: 300;
 }
-
-.sns-icons {
-	height: 1.8rem;
-	margin-top: 0.5rem;
-	display: flex;
-	/* flex-direction: row; */
-	align-content: center;
+dt a{
+	text-decoration: none;
+	color: inherit;
 }
-.sns-icons a {
-	display: flex;
-	margin: 1rem;
+dt a:hover{
+	color: var(--color-point-cyan);
+}
 
-	align-items: center;
+.sns-icons a {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	/* object-fit: cover; */
+	background-size: contain;
+	background-position: center;
+	margin: 1rem 0.5rem;
+}
+
+.sns-icons a.icon-facebook {
+	background-image: var(--icon-facebook);
+}
+.sns-icons a.icon-twitter {
+	background-image: var(--icon-twitter);
+}
+.sns-icons a.icon-pinterest {
+	background-image: var(--icon-pinterest);
+}
+.sns-icons a.icon-instagram {
+	background-image: var(--icon-instagram);
+}
+
+.sns-icons a.icon-facebook:hover {
+	background-image: var(--icon-facebook-hover);
+}
+.sns-icons a.icon-twitter:hover {
+	background-image: var(--icon-twitter-hover);
+}
+.sns-icons a.icon-pinterest:hover {
+	background-image: var(--icon-pinterest-hover);
+}
+.sns-icons a.icon-instagram:hover {
+	background-image: var(--icon-instagram-hover);
 }
 
 .attribution {
@@ -420,7 +470,7 @@ dt {
 
 @media screen and (max-width: 1000px) {
 	/* For mobile : max-width: 480px 
-	For Tablet: max-width: 1000px*/
+	For Tablet: max-width: 768px*/
 
 	body {
 		display: flex;
@@ -524,16 +574,18 @@ dt {
 		text-align: center;
 	}
 	.container__intro .intro-img {
-		max-width: 400px;
+		width: 100%;
+		margin: auto;
+		/* z-index: -2;
+		margin: auto; */
 	}
-	.container__intro img {
-		width: 700px;
-		/* padding: 1.5rem; */
-		/* object-fit: cover; */
-		/* overflow: hidden; */
+	.container__intro .intro-img img {
+		height: 100%;
 	}
 	.container__intro .intro-text {
-		width: 100%;
+		width: 90%;
+		min-width: 400px;
+		margin: auto;
 	}
 	#button-start {
 		margin-bottom: 6rem;
@@ -593,7 +645,7 @@ dt {
 	}
 
 	hr {
-		width: 117%;
+		width: 100%;
 		border: none;
 		border-top: 1px solid var(--color-gray); /* Add your desired color */
 		margin: 1rem 0; /* Optional: Add margin for spacing */
@@ -651,6 +703,8 @@ dt {
 
 	.sub-wrapper.boost {
 		background-image: var(--bg-boost-mobile);
+		/* height: 100%; */
+		/* object-fit: fill; */
 	}
 	/* --- container__footer - mobile ------------------------------------------------------------------ */
 
@@ -667,17 +721,8 @@ dt {
 		font-size: 1rem;
 	}
 	.sns-icons {
-		/* height: 1.8rem;
-		margin-top: 0.5rem; */
 		display: flex;
-		/* flex-direction: row; */
 		align-content: center;
 		margin: auto;
 	}
-	/* .sns-icons a {
-		display: flex;
-		margin: 1rem;
-
-		align-items: center;
-	} */
 }
